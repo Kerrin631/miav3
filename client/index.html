@@ -20,8 +20,12 @@
         <link rel="stylesheet" href="./css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script type="text/javascript">
-            $(window).on("orientationchange",function(){
-              alert("The orientation has changed!");
+            $(window).on("orientationchange",function(event){
+              // alert("The orientation is " + event.orientation);
+              if(window.orientation == 0) {
+                $('body').css({"background-color":"#FF00F4","font-size":"300%"});
+                $('body').append('<div><h1> Please rotate for best experience</h1></div>')
+              }
             });
         </script>
 </head>
