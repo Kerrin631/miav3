@@ -1,6 +1,6 @@
 var myAppModule = angular.module('mia_app', ['ngRoute', 'ui.router', 'ngAnimate']);
 
-myAppModule.config(function ($routeProvider, $stateProvider, $urlRouterProvider) {
+myAppModule.config(function ($routeProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
     // $urlRouterProvider.otherwise('/home');
 
     $routeProvider
@@ -8,10 +8,15 @@ myAppModule.config(function ($routeProvider, $stateProvider, $urlRouterProvider)
             templateUrl: 'partials/home.html',
             controller: 'homeController',
       })
-      .when('/procedures',{
-            templateUrl: 'partials/procedures.html',
-            controller: 'proceduresController',
+      .when('/proceduresMenu',{
+            templateUrl: 'partials/proceduresMenu.html',
+            controller: 'proceduresMenuController',
       })
+      .when('/proceduresMenu/:procedureType',{
+            templateUrl: 'partials/procedureType.html',
+            controller: 'procedureTypeController',
+      })
+
       .otherwise({
           redirectTo: '/home'
         });
@@ -34,5 +39,18 @@ myAppModule.config(function ($routeProvider, $stateProvider, $urlRouterProvider)
       //     }
       //   }
       // })
+
+      //check browser support
+        // if(window.history && window.history.pushState){
+        //     //$locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+
+        //  // to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+
+        //  // if you don't wish to set base URL then use this
+        //  $locationProvider.html5Mode({
+        //          enabled: true,
+        //          requireBase: false
+        //   });
+        // }
 
 });

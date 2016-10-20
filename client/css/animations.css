@@ -1,9 +1,9 @@
 /* ANIMATIONS
 ============================================================================= */
-    .page.ng-enter           { 
+    /*.page.ng-enter           { 
     	animation: scaleUp 0.5s both ease-in; z-index: 8888;
     	-webkit-animation: scaleUp 0.5s both ease-in; z-index: 8888;
-    	}
+    	}*/
     .page.ng-leave           { 
     	animation: rotateFall 0.5s both ease-in; z-index: 9998;
     	-webkit-animation: rotateFall 0.5s both ease-in; z-index: 9998;
@@ -71,3 +71,8 @@
     from    { transform:translateY(100%); }
     to      { transform: translateY(0); }
 }
+
+
+
+
+

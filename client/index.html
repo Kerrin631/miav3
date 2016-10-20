@@ -31,10 +31,12 @@
 
     <!-- call controllers -->
     <script type="text/javascript" src='./angular/controllers/homeController.js'></script>
-    <script type="text/javascript" src='./angular/controllers/proceduresController.js'></script>
+    <script type="text/javascript" src='./angular/controllers/proceduresMenuController.js'></script>
+    <script type="text/javascript" src='./angular/controllers/procedureTypeController.js'></script>
 
 
     <!-- call factories -->
+    <script type="text/javascript" src='./angular/factories/procedureFactory.js'></script>
 
 
 </head>
@@ -57,7 +59,7 @@
                 <nav id="navigation1" class="navigation">
                     <ul>
                         <li><a href="#/home">Home</a></li>
-                        <li><a href="#/procedures">Procedures</a></li>
+                        <li><a href="#/proceduresMenu">Procedures</a></li>
                         <li><a href="#/about">About</a></li>
                         <li><a href="#/meetDoctorNguyen">Dr. Nguyen</a></li>
                         <li><a href="#">Locations</a></li>
@@ -69,7 +71,7 @@
             
         </div>
 
-        <div ng-view class="page {{pageClass}}">
+        <div ng-view class="page {{pageClass}} ">
 
         </div> 
 
