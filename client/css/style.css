@@ -17,8 +17,8 @@ html{
 }
 /* PAGES (specific colors for each page)
 ============================================================================= */
-.page-home      { background:#00D0BC; color:#00907c; }
-.page-procedures     { background:#E59400; color:#a55400; }
+/*.page-home      { background:#00D0BC; color:#00907c; }*/
+/*.page-procedures     { background:#E59400; color:#a55400; }*/
 
 body {
     /*padding: 20px;*/
@@ -241,6 +241,14 @@ a {
     right: 50px;*/
 }
 
+.navigation li {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block;
+    width: 150px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);;
+}
+
 .burger-check:checked ~ .navigation {
     max-height: 500px;
     transition: max-height 1.5s ease-in-out;
@@ -250,17 +258,38 @@ a {
 
 
 .procedures {
-    padding: 30px;
+    /*padding: 30px;*/
+    width: 100vw;
 }
-.procedure {
-    background-color: green;
-    border: 1px solid white;
+.procedureMenu {
+    /*position: absolute;*/
+    /*background-color: green;*/
+    /*border: 1px solid white;*/
     text-align: center;
-    height: 200px;
-}
+    height: 100vh;
+    overflow: hidden;
+/*    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+*/}
 
-.procedure:hover {
-    background-color: blue;
-}
 
+.procedureMenu img {
+    z-index: -1;
+    height: 100vh;
+    position: relative;
+    left: 50%;
+    top: 0%;
+   -webkit-transform: translateY(0%) translateX(-50%);
+    
+}
+.procedureMenu h2 {
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    z-index: 100;
+
+}
 
