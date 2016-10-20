@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Futura_reg;
+}
+html{
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.page        {
+    bottom:0; 
+    /*padding-top:200px;*/
+    position:absolute; 
+    /*text-align:center;*/
+    top:0;  
+    width:100%; 
+}
+/* PAGES (specific colors for each page)
+============================================================================= */
+.page-home      { background:#00D0BC; color:#00907c; }
+.page-procedures     { background:#E59400; color:#a55400; }
+
+body {
+    /*padding: 20px;*/
+    width: 100vw;
+    /*background-color: blue;*/
+}
+
+h1, h2, h3, h4 {
+    font-family: Futura_reg;
+    letter-spacing: 5px;
+}
+
+h1 {
+    /*margin: 200px;*/
+    /*letter-spacing: 5px;*/
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+@font-face {
+    font-family: Futura_reg;
+    src: url('../css/Fonts/FuturaTEEMed_Regular/FuturaTEEMed_Regular.ttf');
+}
+
+.clientTheme{
+    color: #FF00F4;
+    font-family: Futura_reg;
+}
+
+.spaced {
+    letter-spacing: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #FF00F4;
+}
+#header-sticky-wrapper {
+    height: 0px;
+
+}
+#header {
+    position: absolute;
+    margin: 40px;
+    /*left: 0px;*/
+    /*top: 0px;*/
+    z-index: 9999;
+}
+
+#logo {
+    display: inline-block;
+}
+#homeHead {
+    background-image: url('./static/images/model.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right; 
+    text-align: center;
+}
+
+#homeHead h1 {
+    position: absolute;
+    width:100vw;
+    top: 50%;
+    text-align: center;
+}
+
+.displayButton {
+    position: relative;
+    width: 100vw;
+    top: 55%;
+    /*left: 30%;*/
+    margin: 20px;
+    /*text-align: center;*/
+    color: #FF00F4;
+    width: 200px;
+    height: 70px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #FF00F4;
+    border-radius: 5px;
+
+}
+
+.contents {
+    text-align: center;
+    color: #FF00F4;
+    padding: 60px;
+}
+
+/*video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../static/images/doctor.jpg) no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+}*/
+/*
+#introVideo {
+    position: fixed;
+    top:0%;
+    left:0%;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    z-index: -100;
+}*/
+
+/*#introVideo video {
+    min-width: 100%;
+    min-height: 100%;
+}*/
+
+/*#aboutPractice {
+    position: relative;
+    height: 5000px;
+    width: 100%;
+    background-image: #FFF;
+}*/
+
+
+
+/*// Burger menu button*/
+/*$burger--thickness: 4px;*/
+.burger {
+    display: inline-block;
+    margin-top: 20px;
+    /*float: right;*/
+    display: inline-block;
+    border: 0;
+    background: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 4px solid #FF00F4;
+    width: 28px;
+    transition: border-bottom 1s ease-in-out;
+    -webkit-transition: border-bottom 1s ease-in-out; 
+}
+
+.burger:before {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #FF00F4;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;    
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;        
+}
+
+.burger:after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #FF00F4;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+
+.burger-check {
+    display: none;
+    /*margin: 20px;*/
+
+}
+
+.burger-check:checked ~ .burger {
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.8s ease-in-out;
+    -webkit-transition: border-bottom 0.8s ease-in-out;
+}
+
+.burger-check:checked ~ .burger:before {
+    transform: rotate(-405deg) translateY(1px) translateX(-3px);
+    -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);      
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .burger:after {
+    transform: rotate(405deg) translateY(-4px) translateX(-5px); 
+    -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);       
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+
+/*// * * * Navigation * * **/
+/*$navigation__transition: max-height 0.5s ease-in-out;*/
+
+.navigation {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    /*position: relative;
+    right: 50px;*/
+}
+
+.burger-check:checked ~ .navigation {
+    max-height: 500px;
+    transition: max-height 1.5s ease-in-out;
+    /*position: relative;
+    right: 50px;*/
+}
+
+
+.procedures {
+    padding: 30px;
+}
+.procedure {
+    background-color: green;
+    border: 1px solid white;
+    text-align: center;
+    height: 200px;
+}
+
+.procedure:hover {
+    background-color: blue;
+}
+
+

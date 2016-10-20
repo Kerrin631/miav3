@@ -9,8 +9,10 @@ module.exports = {
 			if (err) {
 				console.log(err, 'error')
 			} else {
+				console.log(response)
 				console.log(body, 'SUCCESS')
-				res.json(body)
+				var bodyRes = JSON.parse(body)
+				res.json(bodyRes)
 			}
 		})
 	}

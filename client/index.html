@@ -2,13 +2,17 @@
 <html>
 <head>
     <title>Mia Staging</title>
-    <link rel="shortcut icon" href="./favicon/favicon.png">
+    <link rel="shortcut icon" href="./css/favicon/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Angular -->
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript" src='./bower_components/angular-ui-router/release/angular-ui-router.js'></script>
+    <script type="text/javascript" src='./bower_components/angular-animate/angular-animate.js'></script>
     <!-- <script src="./js/lib/modernizr-2.6.2.min.js"></script> -->
         <script src="./js/lib/jquery-min.js"></script>
-        <script src="./js/lib/underscore-min.js"></script>
-        <script src="./js/lib/backbone-min.js"></script>
+        <script src="./js/lib/jquery.sticky.js"></script>
 
     <!-- GreenSock Libraries -->
         <!-- TweenMax -->
@@ -17,19 +21,61 @@
         <script type="text/javascript" src="./js/GreenSock/src/minified/TimelineMax.min.js"></script>
 
     <!-- CSS -->
-        <link rel="stylesheet" href="./css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script type="text/javascript">
-            $(window).on("orientationchange",function(event){
-              // alert("The orientation is " + event.orientation);
-              if(window.orientation == 0) {
-                $('body').css({"background-color":"#FF00F4","font-size":"300%"});
-                $('body').append('<div><h1> Please rotate for best experience</h1></div>')
-              }
-            });
-        </script>
+        <link rel="stylesheet" type="text/css" href="./css/grid.css">
+        <!-- Animations -->
+        <link rel="stylesheet" type="text/css" href="./css/animations.css">
+
+    <!-- call front end routes -->
+    <script type="text/javascript" src='./angular/app.js'></script> 
+
+    <!-- call controllers -->
+    <script type="text/javascript" src='./angular/controllers/homeController.js'></script>
+    <script type="text/javascript" src='./angular/controllers/proceduresController.js'></script>
+
+
+    <!-- call factories -->
+
+
 </head>
-<body>
-<h1>hello</h1>
+<body ng-app='mia_app'>
+<script>
+  $(document).ready(function(){
+    $("#nav").sticky({topSpacing:0});
+  });
+</script>
+    <div id="wrapper" class="col span-12-of-12">
+        
+        <div id="header" class="col span-11-of-12">
+
+            <div id="logo" class="col span-10-of-12">
+               <a href="#/home"><h1 class="col span-12-of-12 clientTheme">MIA PLASTIC SURGERY</h1></a> 
+            </div>
+            
+            <div id="nav" class="col span-2-of-12">
+                <input class="burger-check span-12-of-12" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <nav id="navigation1" class="navigation">
+                    <ul>
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/procedures">Procedures</a></li>
+                        <li><a href="#/about">About</a></li>
+                        <li><a href="#/meetDoctorNguyen">Dr. Nguyen</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+        </div>
+
+        <div ng-view class="page {{pageClass}}">
+
+        </div> 
+
+
+    </div>
+    
+    <!-- <h1>hello</h1> -->
 </body>
 </html>
