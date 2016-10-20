@@ -296,13 +296,13 @@ a {
 
 .procedureHeader {
     width: 100vw;
-    height: 70vh;
+    height: 50vh;
     background-color: black;
     overflow: hidden;
 }
 
 .procedureHeader img {
-    min-width: 100%;
+    /*min-width: 100%;*/
     width: 100%;
     min-height: 100%;
     /*margin-left: 0px;*/
