@@ -16,6 +16,10 @@ myAppModule.config(function ($routeProvider, $stateProvider, $urlRouterProvider,
             templateUrl: 'partials/procedureType.html',
             controller: 'procedureTypeController',
       })
+      .when('/about',{
+            templateUrl: 'partials/about.html',
+            // controller: 'procedureTypeController',
+      })
 
       .otherwise({
           redirectTo: '/home'

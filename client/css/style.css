@@ -6,12 +6,11 @@
 html{
     font-size: 20px;
     letter-spacing: 3px;
+    overflow-x: hidden;
 }
 .page        {
     bottom:0; 
-    /*padding-top:200px;*/
     position:absolute; 
-    /*text-align:center;*/
     top:0;  
     width:100%; 
 }
@@ -21,9 +20,7 @@ html{
 /*.page-procedures     { background:#E59400; color:#a55400; }*/
 
 body {
-    /*padding: 20px;*/
     width: 100vw;
-    /*background-color: blue;*/
 }
 
 h1, h2, h3, h4 {
@@ -34,8 +31,6 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 4em;
-    /*margin: 200px;*/
-    /*letter-spacing: 5px;*/
 }
 
 h2 {
@@ -75,6 +70,7 @@ a {
 #header {
     position: absolute;
     margin: 40px;
+    /*margin-right: 40px;*/
     /*left: 0px;*/
     /*top: 0px;*/
     z-index: 9999;
@@ -114,6 +110,7 @@ a {
     background-color: transparent;
     border: 2px solid #FF00F4;
     border-radius: 5px;
+    font-size: 20px;
 
 }
 
@@ -240,8 +237,8 @@ a {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease-in-out;
-    /*position: relative;
-    right: 50px;*/
+   /* position: relative;
+    right: 30px;*/
 }
 
 .navigation li {
@@ -252,6 +249,10 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);;
 }
 
+.navigation li:hover {
+    background-color: rgba(60, 60, 60, 0.7);
+}
+
 .burger-check:checked ~ .navigation {
     max-height: 500px;
     transition: max-height 1.5s ease-in-out;
@@ -259,42 +260,43 @@ a {
     right: 50px;*/
 }
 
+.menuLeft {
+    position: relative;
+    right: 130px;
+    min-width: 150px;
+}
+
+.burger-check:checked ~ .menuLeft {
+    position: relative;
+    right: 130px;
+    max-height: 500px;
+    min-width: 150px;
+    transition: max-height 1.5s ease-in-out;
+    /*overflow: visible;*/
+}
+
 
 .procedures {
     /*padding: 30px;*/
     width: 100vw;
+    height: 100vh;
 }
 .procedureMenu {
-    /*position: absolute;*/
-    /*background-color: green;*/
-    /*border: 1px solid white;*/
     text-align: center;
     height: 100vh;
     overflow: hidden;
     width: 25%;
-/*    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-*/}
-
-
-.procedureMenu img {
     z-index: 0;
     height: 100vh;
-    position: relative;
-    left: 50%;
-    top: 0%;
-   -webkit-transform: translateY(0%) translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.procedureMenu h2 {
-    position: absolute;
-    text-align: center;
-    top: 75%;
 
-    z-index: 100;
-    /*width: 25%;*/
+.procedureMenu h2 {
+    position: relative;
+    top: 50%;
+
 
 }
 
@@ -332,6 +334,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    /*font-size: 20px;*/
 
 }
 

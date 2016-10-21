@@ -45,18 +45,25 @@
   $(document).ready(function(){
     $("#nav").sticky({topSpacing:0});
   });
+  $(document).on('scroll', function() {
+    if($('#nav-sticky-wrapper').hasClass( "is-sticky" )){
+        $('#navigation1').removeClass('menuLeft')
+    } else {
+        $('#navigation1').addClass('menuLeft')
+    }
+  });
 </script>
-    <div id="wrapper" class="col span-12-of-12">
+    <div id="wrapper">
         
-        <div id="header" class="col span-11-of-12">
+        <div id="header" class="col span-12-of-12">
 
-            <div id="logo" class="col span-10-of-12">
+            <div id="logo" class="col span-11-of-12">
                <a href="#/home"><h2 class="col span-12-of-12 clientTheme">MIA PLASTIC SURGERY</h2></a> 
             </div>
             
-            <div id="nav" class="col span-2-of-12">
-                <input class="burger-check span-12-of-12" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
-                <nav id="navigation1" class="navigation">
+            <div id="nav" class="col span-1-of-12">
+                <input class="burger-check " id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <nav id="navigation1" class="navigation menuLeft">
                     <ul>
                         <li><a href="#/home">Home</a></li>
                         <li><a href="#/proceduresMenu">Procedures</a></li>
