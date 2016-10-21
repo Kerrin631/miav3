@@ -293,9 +293,9 @@ a {
     background-repeat: no-repeat;
 }
 
-.procedureMenu h2 {
+.procedureMenu h1 {
     position: relative;
-    top: 50%;
+    top: 75%;
 
 
 }
