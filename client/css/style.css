@@ -29,9 +29,11 @@ body {
 h1, h2, h3, h4 {
     font-family: Futura_reg;
     letter-spacing: 5px;
+    z-index: 1000;
 }
 
 h1 {
+    font-size: 4em;
     /*margin: 200px;*/
     /*letter-spacing: 5px;*/
 }
@@ -103,6 +105,7 @@ a {
     top: 55%;
     /*left: 30%;*/
     margin: 20px;
+    margin-top: 50px;
     /*text-align: center;*/
     color: #FF00F4;
     width: 200px;
@@ -289,22 +292,46 @@ a {
     position: absolute;
     text-align: center;
     top: 75%;
+
     z-index: 100;
     /*width: 25%;*/
 
 }
 
 .procedureHeader {
+    position: relative;
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     background-color: black;
     overflow: hidden;
+    z-index: -1;
 }
 
 .procedureHeader img {
-    /*min-width: 100%;*/
+    position: relative;
+    top: 0;
     width: 100%;
     min-height: 100%;
-    /*margin-left: 0px;*/
+    z-index: 0;
+}
+
+.procedureHeader h1 {
+    position: absolute;
+    z-index: 100;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.procedureHeader button {
+    position: absolute;
+    z-index: 100;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
 }
 
