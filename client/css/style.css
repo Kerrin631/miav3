@@ -80,7 +80,7 @@ a {
     display: inline-block;
 }
 #homeHead {
-    background-image: url('./static/images/model.jpg');
+    /*background-image: url('./static/images/model.jpg');*/
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -99,10 +99,7 @@ a {
     position: relative;
     width: 100vw;
     top: 55%;
-    /*left: 30%;*/
-    margin: 20px;
     margin-top: 50px;
-    /*text-align: center;*/
     color: #FF00F4;
     width: 200px;
     height: 70px;
@@ -111,7 +108,13 @@ a {
     border: 2px solid #FF00F4;
     border-radius: 5px;
     font-size: 20px;
+}
 
+#homeHead button {
+    position: relative;
+    top: 70%;
+    text-align: center;
+    margin: 10px 50px;
 }
 
 .contents {
@@ -306,15 +309,10 @@ a {
     height: 100vh;
     background-color: black;
     overflow: hidden;
-    z-index: -1;
-}
-
-.procedureHeader img {
-    position: relative;
-    top: 0;
-    width: 100%;
-    min-height: 100%;
     z-index: 0;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .procedureHeader h1 {
