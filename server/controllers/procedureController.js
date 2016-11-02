@@ -23,7 +23,7 @@ module.exports = {
 				} else if (req.params.data == 'skinProcedures') {
 					var header = 'https://s3.amazonaws.com/kerrinsbucket/skinHeader.jpg'
 				}
-				res.json(header)
+				res.json(bodyRes)
 			}
 		})
 	}

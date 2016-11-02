@@ -1,10 +1,50 @@
-<section class="procedureHeader " style="background-image: url('{{headerImg}}')">
+<!-- <div id="homeHead" >
+	<div id="Video">
+		<video preload="preload" id="video" autoplay="autoplay" loop="loop">
+			<source src="./css/static/video/homeBackground.mp4" type="video/mp4"></source>
+			<source src="./css/static/video/homeBackground.mp4" type="video/m4v"></source>
+		</video>
+		<div id="homeCont">
+			<h1 class="clientTheme">THE ART OF MIA</h1>
+			
+			<div class="buttonDiv">
+				<a href="#/about"><button class="displayButton">About MIA</button></a>
+				<a href="#/proceduresMenu"><button class="displayButton">View Procedures</button></a>
+			</div>
+			
+		</div>
+	</div>
+</div> -->
+
+
+
+
+<section class="procedureHeader">
+
+
+	<div id="Video">
+		<video preload="preload" id="video" autoplay="autoplay" loop="loop">
+			<source src="{{headerBackground}}" type="video/mp4"></source>
+			<source src="{{trustSrc(headerBackground)}}" type="video/m4v"></source>
+		</video>
+		<div id="homeCont">
+			<!-- <h1 class="clientTheme">{{type}}</h1> -->
+			
+			<div class="buttonDiv">
+			<h1 class="clientTheme">{{type}}</h1>
+				<a href="#/proceduresMenu/{{procedureType}}/testimonials"><button class="displayButton">View Results</button></a>
+			</div>
+			
+		</div>
+	</div>
+
+<!-- 
+
 	<div class="innerProcHeader">
 		<h1 class="clientTheme">{{type}}</h1>
 		<a href="#/proceduresMenu/{{procedureType}}/testimonials"><button class="displayButton">View Results</button></a>
-	</div>
+	</div> -->
 </section>
-
-
+<p>{{headerBackground}}</p>
 
 <h1>{{type}}</h1>
